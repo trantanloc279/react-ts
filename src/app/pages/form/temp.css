@@ -1,0 +1,471 @@
+/* @media (max-width: 767px) { */
+.zf-edit-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  overflow: auto;
+}
+
+.zf-edit-wrapper {
+  flex-direction: column;
+  height: auto;
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.zf-edit-content {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(253, 253, 255);
+  flex: 9 1 0%;
+  padding-bottom: 80px;
+}
+
+.zf-edit-header {
+  height: 56px;
+  max-height: 56px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(206, 214, 221);
+  background-color: rgb(255, 255, 255);
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 0px 16px;
+  height: 61px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.zf-edit-title {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.zf-btn-save {
+  position: absolute;
+  font-size: 14px;
+  padding: 8px 16px;
+  z-index: 1;
+  margin: 0px;
+  animation: 2s linear 0s infinite normal none running bmLLXF;
+  background-color: rgb(15, 157, 88);
+  letter-spacing: 0.4px;
+
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.15s ease 0s;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+  border: none;
+  line-height: 1.5;
+  height: 40px;
+  opacity: 1;
+  box-shadow: rgb(29 36 86 / 4%) 2px 2px 6px 0px, rgb(0 0 0 / 6%) 0px 1px 3px;
+}
+
+.zf-toolbox {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(206, 214, 221);
+  background-color: rgb(255, 255, 255);
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  padding: 68px 16px 12px;
+}
+
+.zf-btn-prev {
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.15s ease 0s;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(123, 0, 153);
+  font-size: 14px;
+  padding: 0px 16px;
+  line-height: 1.5;
+  margin: 0px;
+  height: 40px;
+  opacity: 1;
+  box-shadow: rgb(29 36 86 / 4%) 2px 2px 6px 0px, rgb(0 0 0 / 6%) 0px 1p;
+}
+
+.zf-btn-share {
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.15s ease 0s;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(34, 0, 255);
+  font-size: 14px;
+  padding: 0px 16px;
+  line-height: 1.5;
+  margin: 0px;
+  height: 40px;
+  opacity: 1;
+  box-shadow: rgb(29 36 86 / 4%) 2px 2px 6px 0px, rgb(0 0 0 / 6%) 0px 1px 3px;
+}
+
+.zf-icon {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.zf-container-list {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.zf-wrapper-list {
+  margin: 0px;
+  border-radius: 0px;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-image: initial !important;
+  border-bottom: 1px solid rgb(206, 214, 221) !important;
+}
+
+.zf-list-box {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+.zf-list-box-extend {
+  display: flex;
+  flex-direction: column;
+  will-change: opacity;
+  animation: 1s ease-out 0s 1 normal none running gUdGlN;
+}
+
+.zf-list-title-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  -webkit-box-align: initial;
+  align-items: initial;
+  -webkit-box-pack: initial;
+  justify-content: initial;
+  padding: 0px 16px;
+  margin: 0px;
+  flex: 1 1 0%;
+}
+
+.zf-title {
+  font-size: 14px;
+  line-height: 1.9;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.zf-description {
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(101, 101, 101);
+  font-weight: initial;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.zf-box-question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.zf-btn-add-question {
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.15s ease 0s;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(15, 157, 88);
+  font-size: 14px;
+  padding: 0px 16px;
+  line-height: 1.5;
+  margin: 0px;
+  height: 44px;
+  opacity: 1;
+  box-shadow: rgb(29 36 86 / 4%) 2px 2px 6px 0px, rgb(0 0 0 / 6%) 0px 1px 3px;
+}
+
+.zf-box-wrapper-submit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.zf-box-submit {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid rgb(206, 214, 221);
+  background-color: rgba(34, 0, 255, 0.008);
+  border-radius: 6px;
+  margin-bottom: 28px;
+}
+
+.zf-box-content-submit {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.zf-label-input {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.zf-box-input {
+  display: flex;
+  width: 100%;
+}
+
+.zf-input-tag {
+  appearance: none;
+  cursor: text;
+  border: 1px solid rgb(206, 214, 221);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px 12px;
+  height: 50px;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  background-color: white;
+  box-shadow: rgb(50 50 93 / 5%) 0px 1px 3px;
+}
+
+.zf-wrapper-modal {
+  position: fixed;
+  overflow: auto;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: 200ms ease-out 0s 1 normal none running gUdGlN;
+  z-index: 90000;
+}
+
+.zf-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  animation: 200ms ease-out 0s 1 normal none running cEElGO;
+}
+
+.zf-modal-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 14px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(206, 214, 221);
+  border-radius: 8px 8px 0px 0px;
+}
+
+.zf-modal-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  background-color: rgba(34, 0, 255, 0.008);
+}
+
+.zf-modal-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(206, 214, 221);
+}
+
+.zf-wrapper-list-radio {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  box-sizing: border-box;
+  border-right: 1px solid rgb(206, 214, 221);
+  background-color: rgb(255, 255, 255);
+}
+
+.zf-list-radio {
+  display: flex;
+  cursor: pointer;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(206, 214, 221);
+  margin-bottom: -1px;
+  background-color: transparent;
+}
+
+.zf-radio {
+  display: flex;
+  flex-direction: row;
+  margin: 6px 4px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: opacity 200ms ease-out 0s;
+}
+
+.zf-btn-radio {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 1px solid rgb(100, 115, 132);
+  margin-right: 10px;
+}
+
+.zf-checked {
+  border: none;
+  background-color: rgb(34, 0, 255);
+}
+
+.zf-btn-cancel{
+  appearance: none;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: all 0.15s ease 0s;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(206, 214, 221);
+    font-size: 14px;
+    padding: 0px 16px;
+    line-height: 1.5;
+    margin: 0px 6px;
+    height: 44px;
+    opacity: 1;
+    box-shadow: rgb(29 36 86 / 4%) 2px 2px 6px 0px, rgb(0 0 0 / 6%) 0px 
+}
+
+/* } */

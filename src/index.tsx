@@ -1,16 +1,17 @@
-import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom";
 
-import { App } from '@app/App';
+import { App } from "@app/App";
+import "./index.css";
+import "./form.css";
 
-import './index.css';
-import { reportWebVitals } from './reportWebVitals';
+import { reportWebVitals } from "./reportWebVitals";
 
 ReactDOM.render(
   <StrictMode>
     <App />
   </StrictMode>,
-  document.querySelector('#root'),
+  document.querySelector("#zalo-form")
 );
 
 // If you want to start measuring performance in your app, pass a function

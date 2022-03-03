@@ -1,19 +1,626 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+body,
+html {
+  -webkit-overflow-scrolling: touch;
+}
+#root,
+body,
+html {
+  height: 100%;
+}
+button,
+h1,
+h2,
+h3,
+input,
+option,
+p,
+select,
+span,
+textarea {
+  font-family: Open Sans, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+textarea {
+  resize: vertical !important;
+  max-height: 500px !important;
+  box-sizing: border-box !important;
+}
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+a,
+a:visited {
+  color: #20f;
+}
+blockquote {
+  color: #666;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em solid #eee;
+}
+.dropZone:active,
+.dropZone:focus {
+  opacity: 0.5;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  border: none;
+  padding: 0 10px;
+  background: #fff
+    url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0ye2ZpbGw6IzQ0NH08L3N0eWxlPjwvZGVmcz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDQuOTV2MTBIMHoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0xLjQxIDQuNjdsMS4wNy0xLjQ5IDEuMDYgMS40OUgxLjQxek0zLjU0IDUuMzNMMi40OCA2LjgyIDEuNDEgNS4zM2gyLjEzeiIvPjwvc3ZnPg==)
+    no-repeat 99% 50%;
+  background-size: 20px;
+  box-sizing: border-box;
+  outline: 0;
+}
+option,
+select {
+  font-size: 15px;
+}
+.Range
+  .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+  background-color: #f5f4ff !important;
+  color: #4e32ff;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: #20f !important;
+}
+.Range .DayPicker-Day {
+  border-radius: 2px !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  text-decoration: none;
+}
+input:-moz-read-only:focus {
+  box-shadow: none;
+}
+input:read-only:focus {
+  box-shadow: none;
+}
+textarea:-moz-read-only:focus {
+  box-shadow: none;
+}
+textarea:read-only:focus {
+  box-shadow: none;
+}
+.clickable-element {
+  cursor: pointer;
+  font-weight: 500 !important;
+  color: #20f !important;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+.clickable-element:hover {
+  opacity: 0.8;
+}
+.clickable-element:active {
+  opacity: 0.5;
+}
+.billing-plan-info {
+  font-size: 86%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+.flex-1 {
+  flex: 1 1;
+}
+.no-wrap {
+  white-space: nowrap;
+}
+body {
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+  font-family: Open Sans, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  color: #000;
+}
+.letter-spacing-small {
+  letter-spacing: 0.25px;
+}
+.letter-spacing-big,
+.letter-spacing-medium {
+  letter-spacing: 0.5px;
+}
+.clip-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.nf-widget-container {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
+  -webkit-transition: -webkit-box-shadow 0.3s linear;
+  -webkit-transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear;
+}
+.nf-widget-container:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+.nf-widget-container-edit-mode {
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .nf-widget-hide-mobile {
+    display: none;
   }
-
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+}
+.nf-widget-badge {
+  font-weight: 500;
+  white-space: pre;
+  padding: 10px 0;
+  background-color: transparent;
+  text-align: center;
+}
+.modal-out-animation {
+  -webkit-animation: nf-fade-out 0.2s ease-out !important;
+  animation: nf-fade-out 0.2s ease-out !important;
+}
+.toast-out-animation {
+  -webkit-animation: nf-fade-out 0.3s ease-out !important;
+  animation: nf-fade-out 0.3s ease-out !important;
+}
+@-webkit-keyframes nf-fade-out {
+  0% {
+    opacity: 1;
   }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes nf-fade-out {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.DayPicker {
+  display: inline-block;
+  font-size: 1rem;
+}
+.DayPicker-wrapper {
+  position: relative;
+  flex-direction: row;
+  padding-bottom: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.DayPicker-Months {
+  display: flex;
+  justify-content: center;
+}
+.DayPicker-Month {
+  display: table;
+  margin: 1em 1em 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.DayPicker-NavButton {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  left: auto;
+  display: inline-block;
+  margin-top: 2px;
+  width: 1.25em;
+  height: 1.25em;
+  background-position: 50%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  color: #8b9898;
+  cursor: pointer;
+}
+.DayPicker-NavButton:hover {
+  opacity: 0.8;
+}
+.DayPicker-NavButton--prev {
+  margin-right: 1.5em;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwCAYAAAB5R9gVAAAABGdBTUEAALGPC/xhBQAAAVVJREFUWAnN2G0KgjAYwPHpGfRkaZeqvgQaK+hY3SUHrk1YzNLay/OiEFp92I+/Mp2F2Mh2lLISWnflFjzH263RQjzMZ19wgs73ez0o1WmtW+dgA01VxrE3p6l2GLsnBy1VYQOtVSEH/atCCgqpQgKKqYIOiq2CBkqtggLKqQIKgqgCBjpJ2Y5CdJ+zrT9A7HHSTA1dxUdHgzCqJIEwq0SDsKsEg6iqBIEoq/wEcVRZBXFV+QJxV5mBtlDFB5VjYTaGZ2sf4R9PM7U9ZU+lLuaetPP/5Die3ToO1+u+MKtHs06qODB2zBnI/jBd4MPQm1VkY79Tb18gB+C62FdBFsZR6yeIo1YQiLJWMIiqVjQIu1YSCLNWFgijVjYIuhYYCKoWKAiiFgoopxYaKLUWOii2FgkophYp6F3r42W5A9s9OcgNvva8xQaysKXlFytoqdYmQH6tF3toSUo0INq9AAAAAElFTkSuQmCC");
+}
+.DayPicker-NavButton--next {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwCAYAAAB5R9gVAAAABGdBTUEAALGPC/xhBQAAAXRJREFUWAnN119ugjAcwPHWzJ1gnmxzB/BBE0n24m4xfNkTaOL7wOtsl3AXMMb+Vjaa1BG00N8fSEibPpAP3xAKKs2yjzTPH9RAjhEo9WzPr/Vm8zgE0+gXATAxxuxtqeJ9t5tIwv5AtQAApsfT6TPdbp+kUBcgVwvO51KqVhMkXKsVJFXrOkigVhCIs1Y4iKlWZxB1rX4gwlpRIIpa8SDkWmggrFq4IIRaJKCYWnSgnrXIQV1r8YD+1Vrn+bReagysIFfLABRt31v8oBu1xEBttfRbltmfjgEcWh9snUS2kNdBK6WN1vrOWxObWsz+fjxevsxmB1GQDfINWiev83nhaoiB/CoOU438oPrhXS0WpQ9xc1ZQWxWHqUYe0I0qrKCQKjygDlXIQV2r0IF6ViEBxVTBBSFUQQNhVYkHIVeJAtkNsbQ7c1LtzP6FsObhb2rCKv7NBIGoq4SDmKoEgTirXAcJVGkFSVVpgoSrXICGUMUH/QBZNSUy5XWUhwAAAABJRU5ErkJggg==");
+}
+.DayPicker-NavButton--interactionDisabled {
+  display: none;
+}
+.DayPicker-Caption {
+  display: table-caption;
+  margin-bottom: 0.5em;
+  padding: 0 0.5em;
+  text-align: left;
+}
+.DayPicker-Caption > div {
+  font-weight: 500;
+  font-size: 1.15em;
+}
+.DayPicker-Weekdays {
+  display: table-header-group;
+  margin-top: 1em;
+}
+.DayPicker-WeekdaysRow {
+  display: table-row;
+}
+.DayPicker-Weekday {
+  display: table-cell;
+  padding: 0.5em;
+  color: #8b9898;
+  text-align: center;
+  font-size: 0.875em;
+}
+.DayPicker-Weekday abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+.DayPicker-Body {
+  display: table-row-group;
+}
+.DayPicker-Week {
+  display: table-row;
+}
+.DayPicker-Day {
+  border-radius: 50%;
+  text-align: center;
+}
+.DayPicker-Day,
+.DayPicker-WeekNumber {
+  display: table-cell;
+  padding: 0.5em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.DayPicker-WeekNumber {
+  min-width: 1em;
+  border-right: 1px solid #eaecec;
+  color: #8b9898;
+  text-align: right;
+  font-size: 0.75em;
+}
+.DayPicker--interactionDisabled .DayPicker-Day {
+  cursor: default;
+}
+.DayPicker-Footer {
+  padding-top: 0.5em;
+}
+.DayPicker-TodayButton {
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #4a90e2;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+.DayPicker-Day--today {
+  color: #d0021b;
+  font-weight: 600;
+}
+.DayPicker-Day--outside {
+  color: #8b9898;
+  cursor: default;
+}
+.DayPicker-Day--disabled {
+  color: #dce0e0;
+  cursor: default;
+}
+.DayPicker-Day--sunday {
+  background-color: #f7f8f8;
+}
+.DayPicker-Day--sunday:not(.DayPicker-Day--today) {
+  color: #dce0e0;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  position: relative;
+  background-color: #4a90e2;
+  color: #f0f8ff;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: #51a0fa;
+}
+.DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+  background-color: #f0f8ff;
+}
+.DayPickerInput {
+  display: inline-block;
+}
+.DayPickerInput-OverlayWrapper {
+  position: relative;
+}
+.DayPickerInput-Overlay {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.code-block {
+  color: #222;
+  align-items: flex-start;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 8px 2px;
+}
+.code-block,
+.code-block__line-numbers {
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: monospace, system-ui, Roboto !important;
+  background: #fff;
+}
+.code-block__line-numbers {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #737376;
+  flex: 0 0 30px;
+  padding: 25px 0;
+  text-align: center;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: break-all;
+}
+.code-block__code {
+  width: 100%;
+  background: #f6f6f6;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  word-wrap: normal;
+}
+.code-block__code,
+.code-block__code__highlight {
+  font-size: 14px;
+  line-height: 20px;
+  color: #222;
+  white-space: pre;
+  font-family: monospace, system-ui, Roboto !important;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.code-block__code__highlight {
+  padding: 25px 15px;
+  display: block;
+  background: #f8f8f8;
+  border-radius: 4px;
+  background-color: inherit;
+}
+.javascript {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre;
+  color: #222;
+  box-sizing: border-box;
+  font-family: monospace, system-ui, Roboto !important;
+}
+.hljs-name,
+.hljs-tag {
+  color: navy;
+  font-weight: 400;
+  font-family: monospace, system-ui, Roboto !important;
+}
+.hljs-built_in {
+  color: #0086b3;
+}
+.hljs-attr,
+.hljs-built_in {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre;
+  font-family: monospace, system-ui, Roboto !important;
+}
+.hljs-attr {
+  color: #222;
+}
+.hljs-string {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre;
+  color: #d14;
+  font-family: monospace, system-ui, Roboto !important;
+}
+.copy-code-button {
+  position: absolute;
+  right: 8px;
+  top: 24px;
+  margin: 0;
+  vertical-align: bottom;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 5px 12px 7px;
+  display: inline-block;
+  -webkit-appearance: none;
+  -webkit-transition: -webkit-box-shadow 40ms linear;
+  -webkit-transition: box-shadow 40ms linear;
+  transition: box-shadow 40ms linear;
+  max-width: 100%;
+  background-color: #20f;
+}
+.copy-code-button,
+.layout__media {
+  text-transform: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  color: #fff;
+  outline: 0;
+}
+.layout__media {
+  display: flex;
+  align-items: center;
+}
+.copy-label {
+  padding-left: 4px;
+}
+
+.zf-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: auto;
+  background-color: rgb(245, 245, 245);
+}
+
+.zf-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 245, 245);
+  flex: 1 1 auto;
+  max-width: 100%;
+  min-width: auto;
+}
+
+.zf-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0px 16px;
+  min-height: 60px;
+  max-height: 60px;
+}
+
+.zf-logo-text {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  line-height: initial;
+  text-align: left;
+}
+
+.zf-btn-new-form {
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.15s ease 0s;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  background-color: rgb(34, 0, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 14px;
+  padding: 0px 16px;
+  line-height: 1.5;
+  margin: 0px;
+  height: 40px;
+  opacity: 1;
+  box-shadow: rgb(29 36 86 / 4%) 2px 2px 6px 0px, rgb(0 0 0 / 6%) 0px 1px 3px;
+}
+
+.zf-btn-icon-plus {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.zf-header-workspace {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(206, 214, 221);
+  border-bottom: 1px solid rgb(206, 214, 221);
+  background-color: rgb(255, 255, 255);
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 4px 8px;
+  z-index: 999;
+}
+
+.zf-workspace-content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  flex: 1 1 0%;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.zf-workspace-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 0px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 16px;
+  height: 24px;
+  max-height: 24px;
+  color: rgb(255, 255, 255);
+  margin: 4px;
+}
+
+.zf-list-radio:hover {
+  background-color: rgba(34, 0, 255, 0.063);
 }

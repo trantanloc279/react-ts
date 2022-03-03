@@ -1,0 +1,167 @@
+.wrapper-modal {
+  position: fixed;
+  overflow: auto;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: 200ms ease-out 0s 1 normal none running gUdGlN;
+  z-index: 90000;
+}
+
+.create-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  box-sizing: border-box;
+  width: 96%;
+  max-width: 660px;
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 20px 60px 0px;
+  background-color: rgb(255, 255, 255);
+  animation: 200ms ease-out 0s 1 normal none running cEElGO;
+}
+
+.create-modal-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 14px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(206, 214, 221);
+  border-radius: 8px 8px 0px 0px;
+}
+
+.create-modal-header > p {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  line-height: initial;
+  text-align: left;
+}
+
+.close-icon-modal {
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.create-modal-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 240px;
+  overflow: auto;
+  max-height: 65vh;
+  box-sizing: border-box;
+  background-color: rgba(34, 0, 255, 0.008);
+}
+
+.create-modal-body-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.create-modal-body-input {
+  appearance: none;
+  cursor: text;
+  border: 1px solid rgb(206, 214, 221);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px 12px;
+  height: 50px;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  background-color: white;
+  box-shadow: rgb(50 50 93 / 5%) 0px 1px 3px;
+}
+
+.create-modal-body-select {
+  appearance: none;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 0px 12px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+)
+    99% 50% / 20px no-repeat white;
+  box-sizing: border-box;
+  border: 1px solid rgb(206, 214, 221);
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out 0s;
+  color: rgb(0, 0, 0);
+  outline: none;
+  box-shadow: rgb(50 50 93 / 5%) 0px 1px 3px;
+}
+
+.create-modal-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(206, 214, 221);
+}
+.create-modal-btn {
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.15s ease 0s;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  background-color: rgb(34, 0, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 14px;
+  padding: 0px 16px;
+  line-height: 1.5;
+  margin: 0px;
+  height: 44px;
+  opacity: 1;
+  box-shadow: rgb(29 36 86 / 4%) 2px 2px 6px 0px, rgb(0 0 0 / 6%) 0px 1px 3px;
+}
+
+.create-modal-btn-icon {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-left: 8px;
+}

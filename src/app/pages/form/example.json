@@ -1,0 +1,161 @@
+{
+    "pages": [
+        {
+            "blocks": [
+                {
+                    "id": "o5lBN5FAqV",
+                    "type": "text",
+                    "question": "câu hỏi dạng input text",
+                    "badge": "Write in the box below",
+                    "isRequired": true
+                },
+                {
+                    "id": "frUfebFc2C",
+                    "type": "selection",
+                    "question": "câu hỏi selection",
+                    "answers": [
+                        "Option 1",
+                        "Option 2",
+                        "Option 3",
+                        "Option 4",
+                        "Option 5"
+                    ],
+                    "badge": "Select answer",
+                    "isRequired": true,
+                    "multiSelect": true,
+                    "other": {
+                        "isOther": true,
+                        "value": "Other",
+                        "label": "Change below:"
+                    },
+                    "inline": false
+                },
+                {
+                    "id": "r8kEWF5tvy",
+                    "type": "matrix",
+                    "question": "cau hoi matrix",
+                    "answers": [
+                        "Design",
+                        "Usability",
+                        "Performance",
+                        "Price"
+                    ],
+                    "values": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "badge": "Select one answer per row"
+                },
+                {
+                    "id": "id7snF6dph",
+                    "type": "nps",
+                    "question": "No scale",
+                    "scale": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10
+                    ],
+                    "min": "Not at all likely",
+                    "max": "Extremely likely",
+                    "badge": "Pick number"
+                },
+                {
+                    "id": "NtM7fpfiG5",
+                    "type": "ratting",
+                    "question": "cau roi ratting",
+                    "min": "It's bad",
+                    "max": "I love it",
+                    "badge": "Tap stars to rate",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "id": "2vHOsGBw0W",
+                    "type": "text",
+                    "question": "câu hỏi dạng input text",
+                    "badge": "Write in the box below",
+                    "isRequired": true
+                },
+                {
+                    "id": "2vHOsGBw0W",
+                    "type": "selection",
+                    "question": "câu hỏi selection",
+                    "answers": [
+                        "Option 1",
+                        "Option 2",
+                        "Option 3",
+                        "Option 4",
+                        "Option 5"
+                    ],
+                    "badge": "Select answer",
+                    "isRequired": true,
+                    "multiSelect": true,
+                    "other": {
+                        "isOther": true,
+                        "value": "Other",
+                        "label": "Change below:"
+                    },
+                    "inline": false
+                },
+                {
+                    "id": "DINDEky1XC",
+                    "type": "matrix",
+                    "question": "cau hoi matrix",
+                    "answers": [
+                        "Design",
+                        "Usability",
+                        "Performance",
+                        "Price"
+                    ],
+                    "values": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "badge": "Select one answer per row"
+                },
+                {
+                    "id": "B1FgyGF4Eb",
+                    "type": "nps",
+                    "question": "No scale",
+                    "scale": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10
+                    ],
+                    "min": "Not at all likely",
+                    "max": "Extremely likely",
+                    "badge": "Pick number"
+                }
+            ]
+        }
+    ],
+    "button": "Nộp",
+    "complete": {
+        "title": "Thank you",
+        "description": "Message sent successfully."
+    },
+    "title": "title"
+}
